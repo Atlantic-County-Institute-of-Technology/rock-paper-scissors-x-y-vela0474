@@ -1,0 +1,55 @@
+body {
+    background-color: lightgoldenrodyellow;
+    position: absolute;
+    text-align: center;
+}
+
+.button1 {
+    background-color:red;
+    margin-top: 250px;
+    margin-left: 700px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.button2 {
+    background-color:red;
+    margin-top: 250px;
+    margin-left: 1100px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.button3 {
+    background-color: red;
+    margin-top: 250px;
+    margin-left: 200px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.button4 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 450px;
+    margin-top: 250px;
+    position: absolute;
+}
+
+.button5 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 900px;
+    margin-top: 250px;
+    position: absolute;
+}
