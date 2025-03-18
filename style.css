@@ -1,55 +1,50 @@
 body {
     background-color: lightgoldenrodyellow;
-    position: absolute;
+    position: relative;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.button1 {
-    background-color:red;
-    margin-top: 250px;
-    margin-left: 700px;
+
+#rock {
+    background-color: aqua;
     border-radius: 50%;
-    width: 100px;
     height: 100px;
-    position: absolute;
+    width: 100px;
+    margin-top: 350px;
 }
 
-.button2 {
-    background-color:red;
-    margin-top: 250px;
-    margin-left: 1100px;
+#paper {
+    background-color: aqua;
     border-radius: 50%;
-    width: 100px;
     height: 100px;
-    position: absolute;
+    width: 100px;
 }
 
-.button3 {
-    background-color: red;
-    margin-top: 250px;
-    margin-left: 200px;
+#scissor {
+    background-color: aqua;
     border-radius: 50%;
-    width: 100px;
     height: 100px;
-    position: absolute;
+    width: 100px;
 }
 
-.button4 {
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin-left: 450px;
-    margin-top: 250px;
-    position: absolute;
+h1 {
+    text-align: center;
+    position: relative;
 }
 
-.button5 {
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin-left: 900px;
-    margin-top: 250px;
-    position: absolute;
+
+.score_board {
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.score_board p {
+    font-size: 2rem;
+    font-size: bold;
+    display: flex;
 }
