@@ -11,8 +11,8 @@ let computer_score = 0;
 
 your_pick.forEach(your_pick => {
     your_pick.addEventListener("click", () => {
-        playGame(your_pick);
         const user_score = your_pick.id;
+        playGame(user_score);
     });
 });
 
