@@ -28,7 +28,21 @@ body {
     border-radius: 50%;
     height: 100px;
     width: 100px;
-} /*This is will show the scissor emoji on one button*/
+} /*This will show the scissor emoji on one button*/
+
+#pencil {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+} /*This will show the scissor emoji on one button*/
+
+#lipstick {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+} /*This will show the tie emoji on one button*/
 
 h1 {
     text-align: center;
