@@ -1,0 +1,85 @@
+body {
+    background-color: rgba(11, 58, 90, 0.747);
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} /*Helps center everything and gives color to the background*/
+
+
+#rock {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: 100px;
+}/* This will show the rock emoji on one of the buttons*/
+
+#paper {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+} /*This will show the paper emoji on one button*/
+
+#scissor {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+} /*This will show the scissor emoji on one button*/
+
+#pencil {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+} /*This will show the scissor emoji on one button*/
+
+#lipstick {
+    background-color: lightblue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+} /*This will show the tie emoji on one button*/
+
+h1 {
+    text-align: center;
+    position: relative;
+} /*This targets one specific header*/
+
+
+.score_board {
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+} /*This helps center and show the numbers and names of the users */
+
+.score_board p {
+    font-size: 2rem;
+    font-size: bold;
+    display: flex;
+    position: relative;
+    margin-left: 25px;
+} /*The same thing also kind of goes for this */
+
+.your_pick {
+    font-size: 3rem;
+} /*This is for the emoji size */
+
+.reset_button {
+    height: 30px;
+    width: 150px;
+    margin-top: 40px;
+    margin-right: 10px;
+    background-color: red;
+} /*This is for the other button that is going to reset everything */
+
+
+.result {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    color: white;
+} /*Final result and reset button to the game*/
