@@ -1,3 +1,9 @@
+// script.js
+// description: JS file for rock, paper, scissors example project
+// author: vela0474
+// last update: 4.02.25
+
+// html elements
 const your_pick = document.querySelectorAll (".your_pick");
 const user_scoreEl = document.getElementById ("user_score");
 const computer_scoreEl = document.getElementById ("computer_score");
@@ -15,14 +21,14 @@ your_pick.forEach(your_pick => {
     });
 });
 
-
+//This is where the game is supposed to start
 function playGame (useryour_pick) {
     const computeryour_pick =
     getcomputeryour_pick();
     const winner = determinewinner(useryour_pick, computeryour_pick);
     updateUI(useryour_pick, computeryour_pick, winner);
 };
-
+//This tells the computer what to pick
 function getcomputeryour_pick() {
     const options = ["rock","paper","scissor","pencil","lipstick"];
     const randomIndex = Math.floor(Math.random() * options.length);
