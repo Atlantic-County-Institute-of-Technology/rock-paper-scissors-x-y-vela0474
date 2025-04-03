@@ -1,7 +1,7 @@
 // script.js
 // description: JS file for rock, paper, scissors example project
 // author: vela0474
-// last update: 4.03.25
+// last update: 4.02.25
 
 // html elements
 const your_pick = document.querySelectorAll (".your_pick");
@@ -9,12 +9,12 @@ const user_scoreEl = document.getElementById ("user_score");
 const computer_scoreEl = document.getElementById ("computer_score");
 const reset_button = document.getElementById("reset_button");
 const result_text = document.getElementById ("result_text");
+const options = ["rock","paper","scissor","pencil","lipstick"];
 
-//this is the base scores for the computer and user
 let user_score = 0;
 let computer_score = 0;
 
-//this is where the user picks their button
+
 your_pick.forEach(your_pick => {
     your_pick.addEventListener("click", () => {
     const user_score = your_pick.id;
@@ -31,7 +31,7 @@ function playGame (useryour_pick) {
 };
 //This tells the computer what to pick
 function getcomputeryour_pick() {
-    const options = ["rock","paper","scissor","pencil","lipstick"];
+    
     const randomIndex = Math.floor(Math.random() * options.length);
     
     return options[randomIndex];
@@ -48,11 +48,11 @@ function determinewinner(useryour_pick, computeryour_pick) {
     else if (
     (useryour_pick === "scissor" && computeryour_pick === "lipstick" || computeryour_pick === "paper" || computeryour_pick === "pencil") ||
 
-    (useryour_pick === "rock" && computeryour_pick === "pencil" || computeryour_pick === "lipstick") ||
+    (useryour_pick === "rock" && computeryour_pick === "pencil" || computeryour_pick === "lipstick" || computeryour_pick === "scissor") ||
 
-    (useryour_pick === "pencil" && computeryour_pick === "lipstick" || computeryour_pick === "paper" ) ||
+    (useryour_pick === "pencil" && computeryour_pick == "lipstick" || computeryour_pick == "paper" ) ||
 
-    (useryour_pick === "lipstick" && computeryour_pick === "paper" || computeryour_pick === "scissor") ||
+    (useryour_pick === "lipstick" && computeryour_pick == "paper" || computeryour_pick == "scissor") ||
 
     (useryour_pick === "paper" && computeryour_pick === "rock"))
     {
