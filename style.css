@@ -69,13 +69,27 @@ h1 {
     font-size: 3rem;
 } /*This is for the emoji size */
 
+
+.your_pick_display {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin-left: 820px;
+    gap: 40px;
+}
+
+.playeryour_pick {
+    align-items: center;
+    display: flex;
+} /*Both of these are part of the your choice and computer choice*/
+
 .reset_button {
     height: 30px;
     width: 150px;
     margin-top: 40px;
     margin-right: 10px;
-    background-color: red;
-} /*This is for the other button that is going to reset everything */
+} 
+/*This is for the other button that is going to reset everything */
 
 
 .result {
