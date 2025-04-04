@@ -69,27 +69,28 @@ function determinewinner(useryour_pick, computeryour_pick) {
             winner = "computer";
         }  //else, computer wins
         
- updateUI(useryour_pick, computeryour_pick, winner)
-};
-     
-function updateUI(useryour_pick,computeryour_pick, winner) {
-   
-    const your_pickEmojis = {
-        rock: "✊",
-        paper: "🤚",
-        scissor: "✌️",
-        pencil: "✏️",
-        lipstick:  "💄"
-    }
-
-    playeryour_pickEl.textContent = your_pickEmojis[useryour_pick];
-    computeryour_pickEl.textContent = your_pickEmojis[computeryour_pick];
-    //This is supposed to show the emojis on the your choice and computer choice
+        updateUI(useryour_pick, computeryour_pick, winner)
+    };
     
-    if (winner === "draw") {
-        result_text.textContent = `It ends in a draw ${useryour_pick}`;
-    } else if (winner === "user") {
-        result_text.textContent = `You win ${useryour_pick} beats ${computeryour_pick}`;
+    function updateUI(useryour_pick,computeryour_pick, winner) {
+        
+        const your_pickEmojis = {
+            rock: "✊",
+            paper: "🤚",
+            scissor: "✌️",
+            pencil: "✏️",
+            lipstick:  "💄"
+        }
+        
+        playeryour_pickEl.textContent = your_pickEmojis[useryour_pick];
+        computeryour_pickEl.textContent = your_pickEmojis[computeryour_pick];
+        //This is supposed to show the emojis on the your choice and computer choice
+        
+        if (winner === "draw") {
+            result_text.textContent = `It ends in a draw ${useryour_pick}`;
+        } else if (winner === "user") {
+            result_text.textContent = `You win ${useryour_pick} beats ${computeryour_pick}`;
+            console.log(result_text)
         user_scoreEl.textContent = user_score;
     } else {
         result_text.textContent = `You lose ${computeryour_pick} beats ${useryour_pick}`;
