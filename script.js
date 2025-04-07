@@ -11,11 +11,12 @@ const reset_button = document.getElementById("reset_button");
 const result_text = document.getElementById ("result_text");
 const playeryour_pickEl = document.getElementById("playeryour_pick");
 const computeryour_pickEl = document.getElementById("computeryour_pick");
+const clear_btn = document.getElementById("clear_btn");
 const options = ["rock","paper","scissor","pencil","lipstick"];
 
-//these are the users default scores
 let user_score = 0;
 let computer_score = 0;
+//These are the users default scores
 
 
 your_pick.forEach(your_pick => {
@@ -23,7 +24,7 @@ your_pick.forEach(your_pick => {
     const user_score = your_pick.id;
         playGame(user_score);        
     });
-}); //this is where the user and the score is built 
+}); //This is where the user and the score is built 
 
 
 function playGame (useryour_pick) {
@@ -38,15 +39,16 @@ function getcomputeryour_pick() {
     const randomIndex = Math.floor(Math.random() * options.length);
     
     return options[randomIndex];
-    
+
     //This tells the computer what to pick
 };
 
 function determinewinner(useryour_pick, computeryour_pick) {
+    console.log(`Player: ${useryour_pick} | Computer: ${computeryour_pick}`)
     let winner
     // if the user and cpu are the same, draw
     if (useryour_pick === computeryour_pick) {
-        return "draw";
+        winner = "draw";
     } 
     // all win conditions for user
     else if (
@@ -68,10 +70,21 @@ function determinewinner(useryour_pick, computeryour_pick) {
             computer_score++;
             winner = "computer";
         }  //else, computer wins
-        
+
         updateUI(useryour_pick, computeryour_pick, winner)
     };
     
+const game_countEl = document.getElementById ("game_count");
+let game_count = 0;
+// This is stating the new elements
+
+function playGame(useryour_pick) {
+    const computeryour_pick = getcomputeryour_pick();
+    determinewinner(useryour_pick, computeryour_pick);
+    game_count++;
+    game_countEl.textContent = game_count;
+}; //This is going to go with the game number thing that increases the score
+
     function updateUI(useryour_pick,computeryour_pick, winner) {
         
         const your_pickEmojis = {
@@ -80,23 +93,25 @@ function determinewinner(useryour_pick, computeryour_pick) {
             scissor: "✌️",
             pencil: "✏️",
             lipstick:  "💄"
-        }
+        } //These are the options for the rock,paper,scissor, X and Y
         
         playeryour_pickEl.textContent = your_pickEmojis[useryour_pick];
         computeryour_pickEl.textContent = your_pickEmojis[computeryour_pick];
-        //This is supposed to show the emojis on the your choice and computer choice
+     //This is supposed to show the emojis on the your choice and computer choice
         
-        if (winner === "draw") {
+        if (winner == 'draw') {
             result_text.textContent = `It ends in a draw ${useryour_pick}`;
-        } else if (winner === "user") {
+
+       } else if (winner == 'user') {
             result_text.textContent = `You win ${useryour_pick} beats ${computeryour_pick}`;
-            console.log(result_text)
-        user_scoreEl.textContent = user_score;
-    } else {
-        result_text.textContent = `You lose ${computeryour_pick} beats ${useryour_pick}`;
-        computer_scoreEl.textContent = computer_score;
-    }; //All of this makes the game end in a draw, win, or lose for the cpu or user
-};  
+            user_scoreEl.textContent = user_score;
+
+        } else if (winner == 'computer') {
+            result_text.textContent = `You lose ${computeryour_pick} beats ${useryour_pick}`;
+            computer_scoreEl.textContent = computer_score;
+        }; //All of this makes the game end in a draw, win, or lose for the cpu or user
+}; 
+
 
 
  reset_button.addEventListener("click", () => {
@@ -106,3 +121,12 @@ function determinewinner(useryour_pick, computeryour_pick) {
     computer_scoreEl.textContent = "0";
     result_text.textContent = "Choose your weapon";
 }); //This resets the points of the game and restarts the whole game to 0
+
+
+clear_btn.addEventListener("click", () => {
+    game_count= 0;
+}); //This clears the game number function
+
+
+
+

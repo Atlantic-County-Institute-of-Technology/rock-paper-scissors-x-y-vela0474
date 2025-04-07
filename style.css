@@ -78,6 +78,18 @@ h1 {
     gap: 40px;
 }
 
+.game_number {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: antiquewhite;
+    color: rgba(11, 58, 90, 0.747);
+    padding: 10px 15px;
+    border: 3px solid white;
+    font-weight: bold;
+}
+
 .playeryour_pick {
     align-items: center;
     display: flex;
@@ -97,3 +109,10 @@ h1 {
     font-size: 1.5rem;
     color: white;
 } /*Final result and reset button to the game*/
+
+#clear_btn {
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    margin-right: 5x;
+}
